@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Categories=Game;Application;
+Terminal=false
+Exec=/home/vboxuser/Projects/is-Engine-master/app/src/main/build/main
+Path=/home/vboxuser/Projects/is-Engine-master/app/src/main/build
+Name=Game
+Comment=Game
+Icon=/home/vboxuser/Projects/is-Engine-master/app/src/main/build/icon.png
