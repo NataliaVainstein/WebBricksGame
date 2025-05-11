@@ -1,0 +1,24 @@
+{
+    "tasks": [
+        {
+            "label": "Build using script",
+            "type": "shell",
+            "command": "./build.sh",
+            "args": [
+                "runbuild",
+                "Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

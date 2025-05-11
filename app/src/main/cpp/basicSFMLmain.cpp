@@ -20,19 +20,22 @@ bool GameEngine::basicSFMLmain()
     sf::Image iconTex;
     if (!iconTex.loadFromFile(is::GameConfig::GUI_DIR + "icon.png")) return false;
     m_window.setIcon(32, 32, iconTex.getPixelsPtr());
-
+#endif
 
     setFPS(m_window, is::GameConfig::FPS); // set frames per second (FPS)
     sf::View m_view(sf::Vector2f(is::GameConfig::VIEW_WIDTH / 2.f, is::GameConfig::VIEW_HEIGHT / 2.f), sf::Vector2f(is::GameConfig::VIEW_WIDTH, is::GameConfig::VIEW_HEIGHT));
     m_window.setView(m_view);
-    #endif
+
+
 ////////////////////////////////////////////////////////////
 //                    INITIALIZATION
 ////////////////////////////////////////////////////////////
     sf::Vector2f frameDimensions(600, 800);
     sf::Vector2f framePosition(200, 100);
+    //sf::RenderWindow frameWindow(sf::VideoMode(frameDimensions.y, frameDimensions.x), "Bricks");
+    m_window.create(sf::VideoMode(frameDimensions.y, frameDimensions.x), "Bricks");
 
-    GameComponents game(frameDimensions, framePosition);
+    GameComponents game(frameDimensions, framePosition, m_window);
 ////////////////////////////////////////////////////////////
 //                    RENDER LOOP                         //
 ////////////////////////////////////////////////////////////
